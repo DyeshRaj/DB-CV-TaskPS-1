@@ -7,7 +7,7 @@ def track_color():
         print("Cannot access webcam")
         return
 
-    print("Press  to stop")
+    print("Press X to stop")
     colors = {
         "Yellow": (np.array([20, 100, 100]), np.array([35, 255, 255]), (0, 255, 255)),
         "Red":    (np.array([170, 120, 70]), np.array([180, 255, 255]), (0, 0, 255)),
@@ -60,4 +60,5 @@ def track_color():
     cv2.destroyAllWindows()
         
 if __name__ == "__main__":
+
     track_color()
