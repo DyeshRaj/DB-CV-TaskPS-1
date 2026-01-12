@@ -4,14 +4,14 @@ Task for DataByte Lateral Induction - CV Domain, PS-1
 <strong>PS1: Color Based Object Tracking</strong><br>
 Create a program that can detect and track an object of specific color in real time. The 
 program must be able to process video frames and identify regions matching the same colour 
-and track those regions in real-time.  
+and track those regions in real-time.<br>
 Dataset: 
 No pre-labelled dataset is required, however the input video stream (webcam) must be 
-converted to HSV before detection. 
-Expected Outcomes: 
+converted to HSV before detection.<br>
+Expected Outcomes: <br>
 • The system should work smoothly on the real-time input, detecting the colour with 
-minimum lag.  
-• The detected region/object must be highlighted using a bounding box 
+minimum lag.  <br>
+• The detected region/object must be highlighted using a bounding box <br>
 • The output should display a live video feed with clear visual indicators marking the 
-detected object. 
+detected object. <br>
 <hr>
