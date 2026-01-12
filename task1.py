@@ -61,6 +61,6 @@ def track_color():
     cv2.destroyAllWindows()
         
 if __name__ == "__main__":
-
     track_color()
+
 
