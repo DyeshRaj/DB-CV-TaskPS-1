@@ -11,7 +11,8 @@ def track_color():
     colors = {
         "Yellow": (np.array([20, 100, 100]), np.array([35, 255, 255]), (0, 255, 255)),
         "Red":    (np.array([170, 120, 70]), np.array([180, 255, 255]), (0, 0, 255)),
-        "Blue":   (np.array([100, 150, 50]), np.array([140, 255, 255]), (255, 0, 0))
+        "Blue":   (np.array([100, 150, 50]), np.array([140, 255, 255]), (255, 0, 0))'
+        "Green":  (np.array([36, 25, 25]), np.array([86, 255, 255]), (0, 255, 0))
     } #Defining a dictionary of colors with their BGR values for display and HSV for masking
 
 
@@ -62,3 +63,4 @@ def track_color():
 if __name__ == "__main__":
 
     track_color()
+
