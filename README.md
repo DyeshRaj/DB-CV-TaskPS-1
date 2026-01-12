@@ -1,7 +1,7 @@
 # DB-CV-TaskPS-1
 Task for DataByte Lateral Induction - CV Domain, PS-1
 <hr>
-<strong>PS1: Color Based Object Tracking</strong>
+<strong>PS1: Color Based Object Tracking</strong><br>
 Create a program that can detect and track an object of specific color in real time. The 
 program must be able to process video frames and identify regions matching the same colour 
 and track those regions in real-time.  
