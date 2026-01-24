@@ -7,11 +7,11 @@ def track_color():
         print("Cannot access webcam")
         return
 
-    print("Press X to stop")
+    print("Press x to stop")
     colors = {
         "Yellow": (np.array([20, 100, 100]), np.array([35, 255, 255]), (0, 255, 255)),
         "Red":    (np.array([170, 120, 70]), np.array([180, 255, 255]), (0, 0, 255)),
-        "Blue":   (np.array([100, 150, 50]), np.array([140, 255, 255]), (255, 0, 0))'
+        "Blue":   (np.array([100, 150, 50]), np.array([140, 255, 255]), (255, 0, 0)),
         "Green":  (np.array([36, 25, 25]), np.array([86, 255, 255]), (0, 255, 0))
     } #Defining a dictionary of colors with their BGR values for display and HSV for masking
 
@@ -26,7 +26,7 @@ def track_color():
         hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) #Converting RGB to HSV 
         for color_name, (lower, upper, bgr) in colors.items():
     
-            #Creating a mask that checks the yellow color in the frame
+            #Creating a mask that checks the color in the frame
             mask = cv2.inRange(hsv_frame, lower, upper)
     
             #Removing Noise to make sure the tracking is smooth
@@ -41,9 +41,6 @@ def track_color():
                 if cv2.contourArea(l_contour) > 500:
                     x, y, w, h = cv2.boundingRect(l_contour) #Get the coordinates (x,y,w,h) of the rectangle box around the object
 
-                    center_x = x + w // 2 #Finding the center of the tranjectory point
-                    center_y = y + h // 2
-
                     # Draw the rectangle around the object on the original frame
                     # Parameters: image, top-left point, bottom-right point, color (B,G,R), thickness
                     cv2.rectangle(frame, (x, y), (x + w, y + h), bgr, 3)
@@ -52,7 +49,7 @@ def track_color():
                     cv2.putText(frame, color_name+ " COLOR Detected", (x, y - 10),
                             cv2.FONT_ITALIC, 0.7, (0, 0, 0), 2)
                 
-            cv2.imshow("Color Tracking frame", frame)  #Display the frame with tracking
+                cv2.imshow("Color Tracking frame", frame)  #Display the frame with tracking
 
         if cv2.waitKey(1) & 0xFF == ord('x'): #Stop condition
             break
@@ -62,5 +59,3 @@ def track_color():
         
 if __name__ == "__main__":
     track_color()
-
-
